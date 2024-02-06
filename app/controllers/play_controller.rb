@@ -10,7 +10,7 @@ class PlayController < ApplicationController
     if @random_move == "paper"
       @outcome = "lost"
     elsif @random_move == "scissors"
-      @outcome = "win"
+      @outcome = "won"
     else
       @outcome = "tied"
     end
@@ -26,7 +26,7 @@ class PlayController < ApplicationController
     elsif @random_move == "scissors"
       @outcome = "lost"
     else
-      @outcome = "win"
+      @outcome = "won"
     end
 
     render({ :template => "game_templates/play_paper"})
@@ -36,7 +36,7 @@ class PlayController < ApplicationController
     @random_move = ["rock", "paper", "scissors"].sample
 
     if @random_move == "paper"
-      @outcome = "win"
+      @outcome = "won"
     elsif @random_move == "scissors"
       @outcome = "tied"
     else
